@@ -1,0 +1,21 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  activiti:
+    database-schema-update: true
+    check-process-definitions: true
+    process-definition-location-prefix: classpath:/processes/
+    history-level: full
+    db-history-used: true
+    db-identity-used: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/activiti6unit?characterEncoding=UTF8&serverTimezone=GMT
+    username: root
+    password: 123456
+security:
+  basic:
+    enabled: false
