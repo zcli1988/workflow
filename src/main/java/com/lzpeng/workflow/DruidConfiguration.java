@@ -1,12 +1,5 @@
 package com.lzpeng.workflow;
 
-/*
- * @author xugj<br>
- * @version 1.0<br>
- * @createDate 2019/05/30 14:51 <br>
- * @Description <p> </p>
- */
-
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
@@ -21,6 +14,11 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 创建人: 李志鹏
+ * 创建日期: 2019 年 07 月 07 日
+ * 创建时间: 21:16:23
+ */
 @Configuration
 public class DruidConfiguration {
     // 将所有前缀为spring.datasource下的配置项都加载到DataSource中
@@ -32,7 +30,7 @@ public class DruidConfiguration {
 
     @Bean
     public ServletRegistrationBean druidStatViewServlet() {
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(),"/druid/*");
+        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
         Map<String, String> initParams = new HashMap<>();
         //　可配的属性都在 StatViewServlet 和其父类下
         initParams.put("loginUsername", "admin");

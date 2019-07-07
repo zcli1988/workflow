@@ -10,11 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>Activiti工作流工具类</p>
- *
- * @author FRH
- * @version 1.0
- * @time 2018年12月10日上午11:26:02
+ * 创建人: 李志鹏
+ * 创建日期: 2019 年 07 月 07 日
+ * 创建时间: 21:16:23
  */
 public class ActivitiUtils {
 

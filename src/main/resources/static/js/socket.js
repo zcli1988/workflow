@@ -1,4 +1,5 @@
-(function(){}(
+(function () {
+}(
     window.socket = {
         connect(url) {
             let ws = null

@@ -17,7 +17,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author: Henry Yan
+ * 创建人: 李志鹏
+ * 创建日期: 2019 年 07 月 07 日
+ * 创建时间: 21:16:23
  */
 @RestController
 @RequestMapping("/activiti")
@@ -68,7 +70,7 @@ public class ActivitiController {
 
         Map<String, Object> map = new HashMap<>();
         map.put("name", "lzpeng");
-        map.put("random", RandomUtils.nextInt(1000,2000));
+        map.put("random", RandomUtils.nextInt(1000, 2000));
         String businessKey = "businessKey" + 1;
         ProcessInstance processInstance = runtimeService.startProcessInstanceById(processDefinitionId, businessKey, map);
         System.out.println("成功启动了流程：" + processInstance.getId());

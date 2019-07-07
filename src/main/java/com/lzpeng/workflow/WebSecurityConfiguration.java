@@ -29,7 +29,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 import javax.sql.DataSource;
@@ -38,11 +37,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Set up some users and groups that we can use when interacting with the process engine API.
- * We use the testuser in the process definition so we need to include this user.
- *
- * We also enable Web security so we can build a simple ReST API that uses the Process Engine Java API. We need
- * to be authenticated with a user that has the role ROLE_ACTIVITI_USER to be able to use the API.
+ * 创建人: 李志鹏
+ * 创建日期: 2019 年 07 月 07 日
+ * 创建时间: 21:16:23
  */
 @Configuration
 @EnableWebSecurity

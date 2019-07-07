@@ -1,4 +1,5 @@
-/* axios v0.19.0 | (c) 2019 by Matt Zabriskie */ ! function (e, t) {
+/* axios v0.19.0 | (c) 2019 by Matt Zabriskie */
+!function (e, t) {
     "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define &&
     define.amd ? define([], t) : "object" == typeof exports ? exports.axios = t() : e.axios = t()
 }(this, function () {
@@ -12,6 +13,7 @@
             };
             return e[r].call(o.exports, o, o.exports, t), o.loaded = !0, o.exports
         }
+
         var n = {};
         return t.m = e, t.c = n, t.p = "", t(0)
     }([function (e, t, n) {
@@ -24,6 +26,7 @@
                 n = s(i.prototype.request, t);
             return o.extend(n, i.prototype, t), o.extend(n, t), n
         }
+
         var o = n(2),
             s = n(3),
             i = n(5),
@@ -119,6 +122,7 @@
             function e(e, n) {
                 "object" == typeof t[n] && "object" == typeof e ? t[n] = w(t[n], e) : t[n] = e
             }
+
             for (var t = {}, n = 0, r = arguments.length; n < r; n++) v(arguments[n], e);
             return t
         }
@@ -128,6 +132,7 @@
                 "object" == typeof t[n] && "object" == typeof e ? t[n] = b(t[n], e) : "object" ==
                 typeof e ? t[n] = b({}, e) : t[n] = e
             }
+
             for (var t = {}, n = 0, r = arguments.length; n < r; n++) v(arguments[n], e);
             return t
         }
@@ -137,6 +142,7 @@
                 n && "function" == typeof t ? e[r] = S(t, n) : e[r] = t
             }), e
         }
+
         var S = n(3),
             R = n(4),
             j = Object.prototype.toString;
@@ -192,6 +198,7 @@
                 response: new i
             }
         }
+
         var o = n(2),
             s = n(6),
             i = n(7),
@@ -235,6 +242,7 @@
                 "$").replace(/%2C/gi, ",").replace(/%20/g, "+").replace(/%5B/gi, "[").replace(
                 /%5D/gi, "]")
         }
+
         var o = n(2);
         e.exports = function (e, t, n) {
             if (!t) return e;
@@ -263,6 +271,7 @@
         function r() {
             this.handlers = []
         }
+
         var o = n(2);
         r.prototype.use = function (e, t) {
             return this.handlers.push({
@@ -282,6 +291,7 @@
         function r(e) {
             e.cancelToken && e.cancelToken.throwIfRequested()
         }
+
         var o = n(2),
             s = n(9),
             i = n(10),
@@ -328,6 +338,7 @@
             return "undefined" != typeof process && "[object process]" === Object.prototype.toString.call(
                 process) ? e = n(13) : "undefined" != typeof XMLHttpRequest && (e = n(13)), e
         }
+
         var s = n(2),
             i = n(12),
             a = {
@@ -346,7 +357,8 @@
                 transformResponse: [function (e) {
                     if ("string" == typeof e) try {
                         e = JSON.parse(e)
-                    } catch (e) {}
+                    } catch (e) {
+                    }
                     return e
                 }],
                 timeout: 0,
@@ -508,6 +520,7 @@
                     pathname: "/" === o.pathname.charAt(0) ? o.pathname : "/" + o.pathname
                 }
             }
+
             var t, n = /(msie|trident)/i.test(navigator.userAgent),
                 o = document.createElement("a");
             return t = e(window.location.href),
@@ -542,11 +555,13 @@
             }
         }() : function () {
             return {
-                write: function () {},
+                write: function () {
+                },
                 read: function () {
                     return null
                 },
-                remove: function () {}
+                remove: function () {
+                }
             }
         }()
     }, function (e, t) {
@@ -586,6 +601,7 @@
         function n(e) {
             this.message = e
         }
+
         n.prototype.toString = function () {
             return "Cancel" + (this.message ? ": " + this.message : "")
         }, n.prototype.__CANCEL__ = !0, e.exports = n
@@ -603,6 +619,7 @@
                 n.reason || (n.reason = new o(e), t(n.reason))
             })
         }
+
         var o = n(23);
         r.prototype.throwIfRequested = function () {
             if (this.reason) throw this.reason
@@ -635,7 +652,8 @@ try {
         setTimeout(function () {
             try {
                 document.getElementsByTagName('input')[0].dispatchEvent(ev2);
-            } catch (err) {}
+            } catch (err) {
+            }
         }, 1000)
     }
 } catch (err) {
